@@ -11,10 +11,12 @@ namespace Conversores
 
         public  string ByteArrayToHex(byte[] llave)
         {
-            StringBuilder hex = new StringBuilder(llave.Length * 2);
+            /*StringBuilder hex = new StringBuilder(llave.Length * 2);
             foreach (byte b in llave)
                 hex.AppendFormat("{0:x2}", b);
             return hex.ToString();
+            */
+            return BitConverter.ToString(llave).Replace("-", "");
         }
 
         public  byte[] StringToByteArray(string llaveString)
