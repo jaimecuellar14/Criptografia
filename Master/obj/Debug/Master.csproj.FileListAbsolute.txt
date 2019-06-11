@@ -1,0 +1,6 @@
+C:\Users\Jaime\source\repos\CriptoProject\Master\bin\Debug\Master.dll
+C:\Users\Jaime\source\repos\CriptoProject\Master\bin\Debug\Master.pdb
+C:\Users\Jaime\source\repos\CriptoProject\Master\obj\Debug\Master.csprojAssemblyReference.cache
+C:\Users\Jaime\source\repos\CriptoProject\Master\obj\Debug\Master.csproj.CoreCompileInputs.cache
+C:\Users\Jaime\source\repos\CriptoProject\Master\obj\Debug\Master.dll
+C:\Users\Jaime\source\repos\CriptoProject\Master\obj\Debug\Master.pdb
