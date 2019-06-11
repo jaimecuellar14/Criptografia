@@ -64,9 +64,11 @@ namespace Esclavo
                 var doc = new XmlDocument();
                 doc.AppendChild(doc.CreateXmlDeclaration("1.0", "UTF-8", null));
                 XmlNode nodo = doc.CreateElement("clavepublica");
-                 //this.getBytes(this.llavePublica);
+                //this.getBytes(this.llavePublica);
+                XmlElement root = doc.CreateElement("tdes");
                 nodo.InnerText =(this.llavePublica);
-                doc.AppendChild(nodo);
+                root.AppendChild(nodo);
+                doc.AppendChild(root);
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "XML-File | *.xml";
                 if (save.ShowDialog() == DialogResult.OK)
@@ -156,8 +158,10 @@ namespace Esclavo
             doc.AppendChild(doc.CreateXmlDeclaration("1.0", "UTF-8", null));
             XmlNode nodo = doc.CreateElement("textoe");
             //this.getBytes(this.llavePublica);
+            XmlElement root = doc.CreateElement("tdes");
             nodo.InnerXml = (this.txtTextoEncriptado.Text);
-            doc.AppendChild(nodo);
+            root.AppendChild(nodo);
+            doc.AppendChild(root);
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "XML-File | *.xml";
             if (save.ShowDialog() == DialogResult.OK)
