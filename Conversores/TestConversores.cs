@@ -9,7 +9,7 @@ namespace Conversores
 {
     class TestConversores
     {
-      /*  [Test]
+      /* [Test]
         public void TestConvertirAStringPublica()
         {
             var csp = new RSA.RSAMaker().CreateRSAKeyPair();

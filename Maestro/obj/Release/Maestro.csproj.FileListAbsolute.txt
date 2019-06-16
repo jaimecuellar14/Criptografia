@@ -11,10 +11,15 @@ C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\RSA.pdb
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\nunit.framework.pdb
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\nunit.framework.xml
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.csprojAssemblyReference.cache
-C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.Form1.resources
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.Properties.Resources.resources
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.csproj.GenerateResource.cache
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.csproj.CoreCompileInputs.cache
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.csproj.CopyComplete
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.exe
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.pdb
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\Conversores.dll
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\TDES.dll
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\Conversores.pdb
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Release\TDES.pdb
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.exe.config
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Release\Maestro.MaestroForm.resources

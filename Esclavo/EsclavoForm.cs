@@ -93,7 +93,8 @@ namespace Esclavo
         private void btnImportarTDES_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileBrowser = new OpenFileDialog();
-            fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            // fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            fileBrowser.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             fileBrowser.Filter = "XML Files|*.xml";
             fileBrowser.RestoreDirectory = true;
             fileBrowser.ShowDialog();
@@ -138,8 +139,8 @@ namespace Esclavo
             var llave2 = conversor.StringToByteArray(this.l2);
             var llave3 = conversor.StringToByteArray(this.l3);
 
-            var l1= llave1.Concat(llave2).ToArray();
-            this.llaveTDES = l1.Concat(llave3).ToArray();       
+            //var l1= llave1.Concat(llave2).ToArray();
+            this.llaveTDES = llave1.Concat(llave2).Concat(llave3).ToArray();       
         }
 
         private void btnEncriptar_Click(object sender, EventArgs e)
@@ -158,7 +159,7 @@ namespace Esclavo
             doc.AppendChild(doc.CreateXmlDeclaration("1.0", "UTF-8", null));
             XmlNode nodo = doc.CreateElement("textoe");
             //this.getBytes(this.llavePublica);
-            XmlElement root = doc.CreateElement("tdes");
+            XmlElement root = doc.CreateElement("root");
             nodo.InnerXml = (this.txtTextoEncriptado.Text);
             root.AppendChild(nodo);
             doc.AppendChild(root);
@@ -169,6 +170,11 @@ namespace Esclavo
                 doc.Save(save.FileName);
                 MessageBox.Show("Has guardado el fichero", "Texto Encriptado");
             }
+        }
+
+        private void EsclavoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

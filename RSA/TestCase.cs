@@ -10,32 +10,44 @@ namespace RSA
 {
     class TestCase
     {
-     /*   [Test]
-        public void Test()
+       [Test]
+        public void CrearRSATest()
         {
             var test1 = new RSAMaker();
             var xmlparser = new StringtoXML();
             var rsa = test1.CreateRSAKeyPair();
-            var llavePublica = test1.KeyToString(rsa.PublicKey);
-            var llavePrivada = test1.KeyToString(rsa.PrivateKey);
+            var llavePublica = test1.KeyToString(rsa.ExportParameters(false));
+            var llavePrivada = test1.KeyToString(rsa.ExportParameters(true));
             var llave1 = llavePublica.GetElementsByTagName("Modulus")[0].InnerText;
-            var llave2 = llavePrivada.GetElementsByTagName("Modulus")[0].InnerText;
-            
-            Assert.Equals(llave1, llave2);
-           // Assert.AreNotEqual(rsa.PublicKey, rsa.PrivateKey);
-        }*/
+            var llave2 = llavePrivada.GetElementsByTagName("Modulus")[0].InnerText;            
+            Assert.AreNotEqual(llave1, llave2);
+        }
 
-      /*  [Test]
+        [Test]
         public void Encrypt()
         {
             var encriptador = new Encriptador();
-
+            var rsa = new RSA.RSAMaker();
+           var obj= rsa.CreateRSAKeyPair();
             var textoEncriptar = "Prueba Encriptacion";
-            var texto = encriptador.Encriptar(textoEncriptar);
+            var texto = encriptador.Encriptar(textoEncriptar,obj.ExportParameters(true));
 
-            var textoOriginal = encriptador.Desencriptar(texto);
+
+            Assert.AreNotEqual(textoEncriptar, texto);
+        }
+
+        [Test]
+        public void Decrypt()
+        {
+            var encriptador = new Encriptador();
+            var rsa = new RSA.RSAMaker();
+            var obj = rsa.CreateRSAKeyPair();
+            var textoEncriptar = "Prueba Desencriptacion";
+            var texto = encriptador.Encriptar(textoEncriptar, obj.ExportParameters(true));
+
+            var textoOriginal = encriptador.Desencriptar(texto,obj.ExportParameters(false));
 
             Assert.AreEqual(textoEncriptar, textoOriginal);
-        }*/
+        }
     }
 }

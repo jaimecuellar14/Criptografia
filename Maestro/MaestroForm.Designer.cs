@@ -49,12 +49,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 31);
+            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(21, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 21);
+            this.button1.Size = new System.Drawing.Size(140, 47);
             this.button1.TabIndex = 0;
             this.button1.Text = "Generar Claves RSA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -66,53 +68,57 @@
             // 
             // btnImportar
             // 
-            this.btnImportar.Location = new System.Drawing.Point(21, 105);
+            this.btnImportar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnImportar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
+            this.btnImportar.Location = new System.Drawing.Point(21, 115);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(178, 22);
+            this.btnImportar.Size = new System.Drawing.Size(178, 36);
             this.btnImportar.TabIndex = 5;
             this.btnImportar.Text = "Importar clave publica esclavo";
-            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.UseVisualStyleBackColor = false;
             this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
             // btnCrearTDES
             // 
+            this.btnCrearTDES.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnCrearTDES.Enabled = false;
-            this.btnCrearTDES.Location = new System.Drawing.Point(21, 172);
+            this.btnCrearTDES.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
+            this.btnCrearTDES.Location = new System.Drawing.Point(21, 165);
             this.btnCrearTDES.Name = "btnCrearTDES";
-            this.btnCrearTDES.Size = new System.Drawing.Size(140, 26);
+            this.btnCrearTDES.Size = new System.Drawing.Size(140, 37);
             this.btnCrearTDES.TabIndex = 6;
             this.btnCrearTDES.Text = "Generar Clave TDES";
-            this.btnCrearTDES.UseVisualStyleBackColor = true;
+            this.btnCrearTDES.UseVisualStyleBackColor = false;
             this.btnCrearTDES.Click += new System.EventHandler(this.btnCrearTDES_Click);
             // 
             // txtTDES
             // 
-            this.txtTDES.Location = new System.Drawing.Point(221, 178);
+            this.txtTDES.Location = new System.Drawing.Point(244, 174);
             this.txtTDES.Name = "txtTDES";
             this.txtTDES.ReadOnly = true;
-            this.txtTDES.Size = new System.Drawing.Size(100, 20);
+            this.txtTDES.Size = new System.Drawing.Size(463, 20);
             this.txtTDES.TabIndex = 7;
             // 
             // txtLlavePublica
             // 
-            this.txtLlavePublica.Location = new System.Drawing.Point(331, 31);
+            this.txtLlavePublica.Location = new System.Drawing.Point(244, 31);
             this.txtLlavePublica.Name = "txtLlavePublica";
             this.txtLlavePublica.ReadOnly = true;
-            this.txtLlavePublica.Size = new System.Drawing.Size(100, 20);
+            this.txtLlavePublica.Size = new System.Drawing.Size(424, 20);
             this.txtLlavePublica.TabIndex = 8;
             // 
             // txtLlavePrivada
             // 
-            this.txtLlavePrivada.Location = new System.Drawing.Point(331, 61);
+            this.txtLlavePrivada.Location = new System.Drawing.Point(244, 57);
             this.txtLlavePrivada.Name = "txtLlavePrivada";
             this.txtLlavePrivada.ReadOnly = true;
-            this.txtLlavePrivada.Size = new System.Drawing.Size(100, 20);
+            this.txtLlavePrivada.Size = new System.Drawing.Size(424, 20);
             this.txtLlavePrivada.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 31);
+            this.label2.Location = new System.Drawing.Point(167, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 10;
@@ -121,7 +127,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 64);
+            this.label3.Location = new System.Drawing.Point(167, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 11;
@@ -129,79 +135,87 @@
             // 
             // txtLlavePublicaEsclavo
             // 
-            this.txtLlavePublicaEsclavo.Location = new System.Drawing.Point(221, 105);
+            this.txtLlavePublicaEsclavo.Location = new System.Drawing.Point(244, 124);
             this.txtLlavePublicaEsclavo.Name = "txtLlavePublicaEsclavo";
             this.txtLlavePublicaEsclavo.ReadOnly = true;
-            this.txtLlavePublicaEsclavo.Size = new System.Drawing.Size(100, 20);
+            this.txtLlavePublicaEsclavo.Size = new System.Drawing.Size(463, 20);
             this.txtLlavePublicaEsclavo.TabIndex = 12;
             // 
             // btnEncriptarTDES
             // 
+            this.btnEncriptarTDES.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEncriptarTDES.Enabled = false;
+            this.btnEncriptarTDES.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
             this.btnEncriptarTDES.Location = new System.Drawing.Point(21, 219);
             this.btnEncriptarTDES.Name = "btnEncriptarTDES";
-            this.btnEncriptarTDES.Size = new System.Drawing.Size(140, 23);
+            this.btnEncriptarTDES.Size = new System.Drawing.Size(140, 32);
             this.btnEncriptarTDES.TabIndex = 13;
             this.btnEncriptarTDES.Text = "Encriptar llave TDES";
-            this.btnEncriptarTDES.UseVisualStyleBackColor = true;
+            this.btnEncriptarTDES.UseVisualStyleBackColor = false;
             this.btnEncriptarTDES.Click += new System.EventHandler(this.btnEncriptarTDES_Click);
             // 
             // txtTDESEncriptado
             // 
-            this.txtTDESEncriptado.Location = new System.Drawing.Point(221, 221);
+            this.txtTDESEncriptado.Location = new System.Drawing.Point(244, 226);
             this.txtTDESEncriptado.Name = "txtTDESEncriptado";
             this.txtTDESEncriptado.ReadOnly = true;
-            this.txtTDESEncriptado.Size = new System.Drawing.Size(100, 20);
+            this.txtTDESEncriptado.Size = new System.Drawing.Size(463, 20);
             this.txtTDESEncriptado.TabIndex = 14;
             // 
             // btnImportarTexto
             // 
-            this.btnImportarTexto.Location = new System.Drawing.Point(164, 283);
+            this.btnImportarTexto.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnImportarTexto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
+            this.btnImportarTexto.Location = new System.Drawing.Point(167, 283);
             this.btnImportarTexto.Name = "btnImportarTexto";
-            this.btnImportarTexto.Size = new System.Drawing.Size(157, 21);
+            this.btnImportarTexto.Size = new System.Drawing.Size(157, 34);
             this.btnImportarTexto.TabIndex = 15;
             this.btnImportarTexto.Text = "Importar texto encriptado";
-            this.btnImportarTexto.UseVisualStyleBackColor = true;
+            this.btnImportarTexto.UseVisualStyleBackColor = false;
             this.btnImportarTexto.Click += new System.EventHandler(this.btnImportarTexto_Click);
             // 
             // txtTextoEncriptado
             // 
-            this.txtTextoEncriptado.Location = new System.Drawing.Point(366, 284);
+            this.txtTextoEncriptado.Location = new System.Drawing.Point(330, 291);
             this.txtTextoEncriptado.Name = "txtTextoEncriptado";
             this.txtTextoEncriptado.ReadOnly = true;
-            this.txtTextoEncriptado.Size = new System.Drawing.Size(100, 20);
+            this.txtTextoEncriptado.Size = new System.Drawing.Size(338, 20);
             this.txtTextoEncriptado.TabIndex = 16;
             // 
             // btnDesencriptar
             // 
-            this.btnDesencriptar.Location = new System.Drawing.Point(285, 326);
+            this.btnDesencriptar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDesencriptar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
+            this.btnDesencriptar.Location = new System.Drawing.Point(167, 323);
             this.btnDesencriptar.Name = "btnDesencriptar";
-            this.btnDesencriptar.Size = new System.Drawing.Size(102, 25);
+            this.btnDesencriptar.Size = new System.Drawing.Size(157, 45);
             this.btnDesencriptar.TabIndex = 17;
             this.btnDesencriptar.Text = "DESENCRIPTAR";
-            this.btnDesencriptar.UseVisualStyleBackColor = true;
+            this.btnDesencriptar.UseVisualStyleBackColor = false;
             this.btnDesencriptar.Click += new System.EventHandler(this.btnDesencriptar_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(161, 384);
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label4.Location = new System.Drawing.Point(226, 380);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 18;
             this.label4.Text = "Texto Original";
             // 
             // txtTextoOriginal
             // 
-            this.txtTextoOriginal.Location = new System.Drawing.Point(285, 381);
+            this.txtTextoOriginal.Location = new System.Drawing.Point(330, 378);
             this.txtTextoOriginal.Name = "txtTextoOriginal";
-            this.txtTextoOriginal.Size = new System.Drawing.Size(405, 20);
+            this.txtTextoOriginal.Size = new System.Drawing.Size(338, 20);
             this.txtTextoOriginal.TabIndex = 19;
             // 
             // MaestroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtTextoOriginal);
             this.Controls.Add(this.label4);
@@ -221,7 +235,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "MaestroForm";
-            this.Text = "Form1";
+            this.Text = "Maestro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

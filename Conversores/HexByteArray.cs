@@ -15,7 +15,7 @@ namespace Conversores
             foreach (byte b in llave)
                 hex.AppendFormat("{0:x2}", b);
             return hex.ToString();
-            */
+         .   */
             return BitConverter.ToString(llave).Replace("-", "");
         }
 

@@ -17,7 +17,7 @@ namespace RSA
 
         public System.Security.Cryptography.RSA CreateRSAKeyPair()
         {
-            var rsa = RSACryptoServiceProvider.Create();
+            var rsa = new RSACryptoServiceProvider(512);
             
           var privada=  rsa.ExportParameters(true);
            var publica=rsa.ExportParameters(false);

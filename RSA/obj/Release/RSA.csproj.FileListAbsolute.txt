@@ -11,3 +11,6 @@ C:\Users\Jaime\source\repos\CriptoProject\RSA\obj\Release\RSA.csproj.CoreCompile
 C:\Users\Jaime\source\repos\CriptoProject\RSA\obj\Release\RSA.csproj.CopyComplete
 C:\Users\Jaime\source\repos\CriptoProject\RSA\obj\Release\RSA.dll
 C:\Users\Jaime\source\repos\CriptoProject\RSA\obj\Release\RSA.pdb
+C:\Users\Jaime\source\repos\CriptoProject\RSA\bin\Release\Conversores.dll
+C:\Users\Jaime\source\repos\CriptoProject\RSA\bin\Release\Conversores.pdb
+C:\Users\Jaime\source\repos\CriptoProject\RSA\obj\Release\RSA.csprojAssemblyReference.cache

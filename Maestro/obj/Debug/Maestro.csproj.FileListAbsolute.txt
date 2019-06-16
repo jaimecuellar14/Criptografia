@@ -22,3 +22,4 @@ C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Debug\TDES.pdb
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Debug\Conversores.dll
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\bin\Debug\Conversores.pdb
 C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Debug\Maestro.MaestroForm.resources
+C:\Users\Jaime\source\repos\CriptoProject\Maestro\obj\Debug\Maestro.exe.config

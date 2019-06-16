@@ -58,7 +58,8 @@ namespace Maestro
         private void btnImportar_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileBrowser = new OpenFileDialog();
-            fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            //fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            fileBrowser.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             fileBrowser.Filter = "XML Files|*.xml";
             fileBrowser.RestoreDirectory = true;
             fileBrowser.ShowDialog();
@@ -114,7 +115,7 @@ namespace Maestro
             string tdes = null;
             for (var i = 0; i < this.llavesTDESArray.Length; i++)
             {
-                var llavesTDESEncriptadas = encriptador.Encriptar(this.llavesTDESArray[i], this.llavePublicaEsclavo);
+                var llavesTDESEncriptadas = encriptador.Encriptar(this.llavesTDESArray[i], this.cspEsclavo.ExportParameters(false));
                 var llaveNum = i + 1;
                 tdes += llavesTDESEncriptadas;
                 XmlNode node = doc.CreateElement("tdes" + llaveNum);
@@ -151,7 +152,8 @@ namespace Maestro
         {
             var conversor = new Conversores.HexByteArray();
             OpenFileDialog fileBrowser = new OpenFileDialog();
-            fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            //fileBrowser.InitialDirectory = "C:\\Users\\Jaime\\Desktop";
+            fileBrowser.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             fileBrowser.Filter = "XML Files|*.xml";
             fileBrowser.RestoreDirectory = true;
             fileBrowser.ShowDialog();

@@ -46,9 +46,6 @@ namespace RSA
 
             var bytesTextoPlano = csp.Decrypt(bytesTextoCifrado,true);
             return new Conversores.HexByteArray().ByteArrayToHex(bytesTextoPlano);
-
-
-
         }
     }
 }

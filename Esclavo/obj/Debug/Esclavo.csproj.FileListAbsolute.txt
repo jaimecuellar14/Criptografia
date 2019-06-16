@@ -22,3 +22,4 @@ C:\Users\Jaime\source\repos\CriptoProject\Esclavo\bin\Debug\Conversores.pdb
 C:\Users\Jaime\source\repos\CriptoProject\Esclavo\obj\Debug\Esclavo.EsclavoForm.resources
 C:\Users\Jaime\source\repos\CriptoProject\Esclavo\bin\Debug\TDES.dll
 C:\Users\Jaime\source\repos\CriptoProject\Esclavo\bin\Debug\TDES.pdb
+C:\Users\Jaime\source\repos\CriptoProject\Esclavo\obj\Debug\Esclavo.exe.config
