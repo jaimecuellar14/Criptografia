@@ -68,9 +68,10 @@ namespace Maestro
 
             doc.Load(fileBrowser.OpenFile());
 
-            var a = doc.LastChild.InnerText;
+            // var a = doc.LastChild.InnerText;
+            var a = doc.GetElementsByTagName("clavepublica").Item(0).InnerText;
             var conversor = new ConvertirXML().convertirAXml(a);
-            this.txtLlavePublicaEsclavo.Text = conversor.InnerText;
+            this.txtLlavePublicaEsclavo.Text = a;
             //var test = Convert.FromBase64String(a);
             this.crearRSAEsclavo(a);
             this.btnCrearTDES.Enabled = true;
@@ -81,12 +82,10 @@ namespace Maestro
             var conversor = new Conversores.HexByteArray();
             var tdes = new TDES.TDESMaker();
             var llave = tdes.CrearLlavesTDES();
-            this.tdesKey = llave;
-            this.llavesTDES = new TDESKeyObject().dividirArray(llave);
-            this.iv = conversor.ByteArrayToHex(tdes.getIV());
-            // this.llave1TDES = Convert.ToBase64String(this.llavesTDES.tdesKey1, 0, this.llavesTDES.tdesKey1.Length);
-            //this.llave2TDES = Convert.ToBase64String(this.llavesTDES.tdesKey2, 0, this.llavesTDES.tdesKey2.Length);
-            //this.llave3TDES = Convert.ToBase64String(this.llavesTDES.tdesKey3, 0, this.llavesTDES.tdesKey3.Length);
+            this.tdesKey = llave.Key;
+            this.llavesTDES = new TDESKeyObject().dividirArray(llave.Key);
+            this.iv = conversor.ByteArrayToHex(llave.IV);
+            
             this.llave1TDES = conversor.ByteArrayToHex(this.llavesTDES.tdesKey1);
             this.llave2TDES = conversor.ByteArrayToHex(this.llavesTDES.tdesKey2);
             this.llave3TDES = conversor.ByteArrayToHex(this.llavesTDES.tdesKey3);
@@ -100,7 +99,7 @@ namespace Maestro
 
         public void crearRSAEsclavo(string llavePublica)
         {
-            this.cspEsclavo = new System.Security.Cryptography.RSACryptoServiceProvider();
+            this.cspEsclavo = new System.Security.Cryptography.RSACryptoServiceProvider(512);
             this.cspEsclavo.FromXmlString(llavePublica);
             this.llavePublicaEsclavo = cspEsclavo.ExportParameters(false);
         }
@@ -109,7 +108,6 @@ namespace Maestro
         {
             var encriptador = new Encriptador();
             var xmlLlavesTDES = new XDocument();
-            XElement rootElement = new XElement("tdes");
             XmlDocument doc = new XmlDocument();
             XmlElement root = doc.CreateElement("tdes");
             string tdes = null;
@@ -126,7 +124,6 @@ namespace Maestro
             XmlNode iv = doc.CreateElement("iv");
             iv.InnerText = encriptador.Encriptar(this.iv, this.llavePublicaEsclavo);
             root.AppendChild(iv);
-            //XmlNode node = doc.CreateElement("iv" + this.iv)
             doc.AppendChild(root);
 
             SaveFileDialog save = new SaveFileDialog();

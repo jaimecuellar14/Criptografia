@@ -48,8 +48,8 @@ namespace Esclavo
             this.llavePublica = publica;
             this.llavePrivada = privada;
 
-            this.txtPublica.Text = new Conversores.ConvertirXML().convertirAXml(publica).InnerText;
-            this.txtPrivada.Text = new Conversores.ConvertirXML().convertirAXml(privada).InnerText;
+            this.txtPublica.Text = this.llavePublica;
+            this.txtPrivada.Text = this.llavePrivada;
             this.button2.Enabled = true;
         }
 
@@ -146,7 +146,7 @@ namespace Esclavo
         private void btnEncriptar_Click(object sender, EventArgs e)
         {
             var conversor = new Conversores.HexByteArray();
-            var iv = conversor.StringToByteArray(this.iv);
+            var iv = conversor.StringToByteArray(this.iv2);
             var tdesEncriptor = new TDES.TDESCript();
             var textoEncriptado = tdesEncriptor.Encriptar(this.txtTextoEncriptar.Text, this.llaveTDES, iv);
             this.txtTextoEncriptado.Text = conversor.ByteArrayToHex(textoEncriptado);

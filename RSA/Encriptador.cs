@@ -24,9 +24,9 @@ namespace RSA
         }
        public string Encriptar(string text, RSAParameters llavePublica)
         {
-          // CrearLlaves();
-            
-            var csp = new RSACryptoServiceProvider();
+            // CrearLlaves();
+
+            RSACryptoServiceProvider csp = new RSACryptoServiceProvider(512);
             csp.ImportParameters(llavePublica);
 
             var bytesPlainTextData = new Conversores.HexByteArray().StringToByteArray(text);
@@ -41,7 +41,7 @@ namespace RSA
             
             // var bytesTextoCifrado = Convert.FromBase64String(textoCifrado);
             var bytesTextoCifrado = new Conversores.HexByteArray().StringToByteArray(textoCifrado);
-            var csp = new RSACryptoServiceProvider();
+            RSACryptoServiceProvider csp = new RSACryptoServiceProvider(512);
             csp.ImportParameters(llavePrivada);
 
             var bytesTextoPlano = csp.Decrypt(bytesTextoCifrado,true);

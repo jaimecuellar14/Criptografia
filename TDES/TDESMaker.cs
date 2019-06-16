@@ -11,14 +11,14 @@ namespace TDES
     {
 
         public byte[] iv;
-        public byte[] CrearLlavesTDES()
+        public TripleDESCryptoServiceProvider CrearLlavesTDES()
         {
-            var tdes = new TripleDESCryptoServiceProvider();
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
             tdes.GenerateKey();
             tdes.GenerateIV();
             this.iv = tdes.IV;
             var llave = tdes.Key;
-            return llave;
+            return tdes;
         }
 
         public byte[] getIV()

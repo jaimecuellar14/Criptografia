@@ -10,7 +10,7 @@ namespace RSA
 {
     class TestCase
     {
-       [Test]
+      /* [Test]
         public void CrearRSATest()
         {
             var test1 = new RSAMaker();
@@ -22,7 +22,7 @@ namespace RSA
             var llave2 = llavePrivada.GetElementsByTagName("Modulus")[0].InnerText;            
             Assert.AreNotEqual(llave1, llave2);
         }
-
+        */
         [Test]
         public void Encrypt()
         {
